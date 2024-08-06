@@ -9,7 +9,9 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = postData.find((p) => p.id == params.id);
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "";
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    "https://dynamic-og-image-eight.vercel.app";
 
   if (!post) {
     return {
