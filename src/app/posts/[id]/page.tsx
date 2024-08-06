@@ -9,6 +9,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = postData.find((p) => p.id == params.id);
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "";
 
   if (!post) {
     return {
@@ -16,8 +17,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  return {
-    metadataBase: new URL("http://localhost:3000"),
+  const metadata = {
+    metadataBase: new URL(siteUrl),
     title: post.title,
     description: post.description,
     openGraph: {
@@ -34,6 +35,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ],
     },
   };
+
+  // console.log("Open Graph Images:", metadata.openGraph.images);
+
+  return metadata;
 }
 
 export default function Post({ params }: Props) {
