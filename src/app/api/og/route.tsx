@@ -17,11 +17,12 @@ export async function GET(request: Request) {
           alignItems: "center",
           width: "1200px",
           height: "630px",
-          backgroundColor: "#f4f4f4",
+          backgroundColor: "#1a1a1a",
           borderRadius: "10px",
           padding: "40px",
-          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
           fontFamily: "'Helvetica Neue', Arial, sans-serif",
+          color: "#e0e0e0",
         }}
       >
         {title && (
@@ -34,17 +35,18 @@ export async function GET(request: Request) {
               alignItems: "flex-start",
             }}
           >
-            <h2
+            <h1
               style={{
                 fontSize: "48px",
-                fontWeight: "bold",
-                color: "#333",
+                fontWeight: "900",
+                color: "#e0e0e0",
                 margin: "0",
-                lineHeight: "1.2",
+                lineHeight: "1.9",
+                textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)",
               }}
             >
               {title}
-            </h2>
+            </h1>
           </div>
         )}
         {image && (
@@ -63,6 +65,7 @@ export async function GET(request: Request) {
                 maxHeight: "400px",
                 borderRadius: "10px",
                 objectFit: "cover",
+                border: "4px solid #e0e0e0",
               }}
             />
           </div>
