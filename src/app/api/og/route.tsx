@@ -12,64 +12,14 @@ export async function GET(request: Request) {
       <div
         style={{
           display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
           justifyContent: "center",
-          width: "100%",
-          height: "100%",
-          backgroundColor: "#f3f4f6",
-          color: "#111827",
-          fontFamily: "Arial, sans-serif",
-          position: "relative",
+          alignItems: "center",
         }}
       >
-               {" "}
-        {image && (
-          <Image
-            src={image}
-            alt="OG Image"
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              zIndex: 0,
-              opacity: 0.3,
-            }}
-          />
-        )}
-               {" "}
-        <div
-          style={{
-            zIndex: 1,
-            padding: "20px",
-            backgroundColor: "rgba(255, 255, 255, 0.8)",
-            borderRadius: "10px",
-            textAlign: "center",
-          }}
-        >
-                   {" "}
-          {title && (
-            <h1
-              style={{
-                margin: 0,
-                fontSize: "48px",
-                lineHeight: "1.2",
-              }}
-            >
-                            {title}           {" "}
-            </h1>
-          )}
-                 {" "}
-        </div>
-             {" "}
+        <h1>Lorem, ipsum.</h1>
+        {title && <h2>{title}</h2>}
+        {image && <Image src={image} width={600} height={400} alt="img" />}
       </div>
-    ),
-    {
-      width: 1200,
-      height: 630,
-    }
+    )
   );
 }

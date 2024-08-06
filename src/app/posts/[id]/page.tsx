@@ -17,6 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
+    metadataBase: new URL("http://localhost:3000"),
     title: post.title,
     description: post.description,
     openGraph: {
