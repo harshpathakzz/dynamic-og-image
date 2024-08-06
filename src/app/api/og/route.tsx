@@ -17,7 +17,7 @@ export async function GET(request: Request) {
           alignItems: "center",
           width: "1200px",
           height: "630px",
-          backgroundColor: "#1a1a1a",
+          backgroundColor: "black",
           borderRadius: "10px",
           padding: "40px",
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
