@@ -248,7 +248,7 @@ export async function GET(request: Request) {
 Ensure that the `NEXT_PUBLIC_SITE_URL` environment variable is set in your `.env.local` file if you're running the app locally. This URL is used to generate the correct OG image URL.
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://dynamic-og-image-eight.vercel.app
+NEXT_PUBLIC_SITE_URL=<YOUR BASE URL>
 ```
 
 ## License
